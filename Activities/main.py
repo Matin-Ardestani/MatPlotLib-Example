@@ -4,11 +4,12 @@ from pathlib import Path
 
 directory = str(Path.cwd())
 
-temp = directory.split('/')
+temp = directory.split('\\')
 if temp[-1] != 'Activities':
-    directory += '/Activities'
+    directory += '\\Activities'
 
-f = Path('%s/activity.xlsx' % directory)
+f = ('%s/activity.xlsx' % directory)
+print(directory)
 ob = openpyxl.load_workbook(f)
 
 sheet = ob.active
