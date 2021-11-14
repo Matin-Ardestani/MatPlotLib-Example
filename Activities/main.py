@@ -9,7 +9,7 @@ if temp[-1] != 'Activities':
     directory += '\\Activities'
 
 f = ('%s/activity.xlsx' % directory)
-print(directory)
+
 ob = openpyxl.load_workbook(f)
 
 sheet = ob.active
@@ -30,7 +30,7 @@ counter_python = 3
 result = []
 counter = 0
 
-for this in range(70):
+for this in range(121):
 
     counter_date += 4
     counter_all += 4
