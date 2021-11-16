@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import openpyxl
 from pathlib import Path
 
+# open xlsx file
 directory = str(Path.cwd())
 
 temp = directory.split('\\')
@@ -14,6 +15,7 @@ ob = openpyxl.load_workbook(f)
 
 sheet = ob.active
 
+# get datas from xlsx file
 lst = []
 dates = []
 all_time = []
@@ -65,7 +67,7 @@ for this in result:
     dates.append(this['date'])
 
 
-
+# The plot
 plt.fill_between(dates , all_times, label='All Activities' , color='#2a99b0')
 plt.plot(dates ,all_times , color="#022b33")
 
